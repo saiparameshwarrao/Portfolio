@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+  font-family: 'Tarif', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #FFFFFF; /* White text */
+  background-color: #000000; /* Black background */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header and Navigation */
+.header {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centers the navigation buttons */
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #FFFFFF;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #FFA500; /* Neon orange on hover */
+}
+
+/* Home Section */
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #000000;
+}
+
+.profile-container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.profile-container p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.download-btn {
+  background-color: #FFA500; /* Neon orange button */
+  color: #000000; /* Black text */
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #FF8C00; /* Darker orange on hover */
+}
+
+.profile-container .image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* About Section */
+#about {
+  padding: 4rem 2rem;
+  background-color: #1A1A1A; /* Dark gray background */
+}
+
+#about h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+#about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Projects Section */
+#project {
+  padding: 4rem 2rem;
+  background-color: #000000;
+}
+
+#project h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.project-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  background-color: #1A1A1A; /* Dark gray background */
+  border: 1px solid #333333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+}
+
+
+.project-pic {
+  width: 100%; /* Ensures the image takes the full width of its container */
+  max-height: 200px; /* Set a max height to maintain consistency */
+  object-fit: cover; /* Ensures the image fills the container without distortion */
+  border-radius: 5px; /* Optional: adds slight rounding to edges */
+}
+
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.project-item p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.github {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.github:hover {
+  transform: scale(1.2);
+}
+
+/* Skills Section */
+#skills {
+  padding: 4rem 2rem;
+  background-color: #1A1A1A; /* Dark gray background */
+}
+
+#skills h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.skills-category {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.category {
+  text-align: center;
+  background-color: #000000; /* Black background */
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.category img {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.category img:hover {
+  transform: scale(1.2);
+}
+
+/* Contact Section */
+#contact {
+  padding: 4rem 2rem;
+  background-color: #000000;
+}
+
+#contact h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #FFA500; /* Neon orange for headings */
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.phone-number {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
