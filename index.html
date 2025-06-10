@@ -12,40 +12,89 @@
 </head>
 <body>
   <header class="header">
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#project">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <nav class="navbar" aria-label="Main navigation">
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">
+      <span class="sr-only">Menu</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#project" class="nav-link">Projects</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+    <script>
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        document.getElementById('nav-links').classList.toggle('active');
+      });
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 60,
+            density: { enable: true, value_area: 800 }
+          },
+          color: {
+            value: ["#FFA500", "#00FFFF", "#FF69B4", "#7CFC00", "#FFD700"]
+          },
+          shape: { type: "circle" },
+          opacity: { value: 1, random: true },
+          size: { value: 10, random: true },
+          line_linked: { enable: false },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            out_mode: "out"
+          }
+        },
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "repulse" }
+          },
+          modes: {
+            repulse: { distance: 100, duration: 0.4 }
+          }
+        },
+        retina_detect: true
+      });
+    </script>
+    
+    
   </header>
 
   <main>
     <!-- Home Section -->
-    <section id="home" class="slide profile-container">
-      <div class="content">
-        <h1>I'm <span>Sai Parameshwar Rao</span></h1>
-        <p>
-          I am a Full Stack Developer skilled in creating web applications. 
-          I work on both front-end and back-end to deliver user-friendly and reliable solutions.
-        </p>
-        <a href="resume.pdf" download class="download-btn">Download CV</a>
-      </div>
-      <div class="image">
-        <img src="1.png" alt="Portrait of Sai Parameshwar Rao">
-      </div>
-    </section>
+    <!-- Dynamic Background -->
+
+
+<!-- Home Section -->
+<section id="home" class="profile-container">
+  <div id="particles-js"></div> <!-- Particles background -->
+
+  <div class="content">
+    <h1>I'm <span>Sai Parameshwar Rao</span></h1>
+    <p class="subhead">Tech Enthusiast | Web Developer | Problem Solver</p>
+    <div class="btn-container">
+      <a href="paramesh_resume.pdf" download class="download-btn">Download Resume</a>
+    </div>
+  </div>
+</section>
+
 
     <!-- About Section -->
     <section id="about" class="slide">
       <h1>About Me</h1>
-      <p>
-        Hi, I'm P. Sai Parameshwar Rao from Hanamkonda, a passionate full-stack developer with expertise in both front-end and back-end technologies. My key skills include React, SQL, and a strong foundation in building dynamic and scalable applications.
-        I graduated with a B.Tech degree from SR University, achieving an impressive CGPA of 9.2, which reflects my dedication to academics and technical excellence.
-      </p>
+      <p>  
+        Hi, I'm P. Sai Parameshwar Rao from Hanamkonda, a passionate full-stack developer with expertise in both front-end and back-end technologies. My key skills include React, SQL, and a strong foundation in building dynamic and scalable applications.  
+        
+        <!-- I also have a keen interest in DevOps, focusing on CI/CD pipelines, containerization with Docker, orchestration using Kubernetes, and infrastructure automation with Terraform and Ansible. My goal is to streamline development workflows and ensure efficient, reliable deployments.   -->
+        
+        I graduated with a B.Tech degree from SR University, achieving an impressive CGPA of 9.42, which reflects my dedication to academics and technical excellence.  
+        </p>
     </section>
 
     <!-- Projects Section -->
@@ -70,6 +119,24 @@
             An e-commerce recommendation system enhances online shopping by suggesting products tailored to users. Using machine learning, it analyzes behavior and preferences to recommend items like “You may also like,” improving satisfaction and boosting sales.
           </p>
           <a href="https://github.com/saiparameshwarrao/E-Commerce_Recommendation" target="_blank" rel="noopener noreferrer">
+            <img src="./icons/github1.png" class="github" alt="GitHub Link">
+          </a>
+        </div>
+        <div class="project-item">
+          <h3>Movie Review System</h3>
+          <img class="project-pic" src="./movie_review.png" alt="Movie Review System">
+            The Movie Review System is a web-based platform that allows users to browse, review, and rate movies. It features user authentication, a dynamic movie catalog, and an interactive review section where users can share their opinions. <br>
+            <br><a href="https://github.com/saiparameshwarrao/Movie_Review_System" target="_blank" rel="noopener noreferrer">
+            <img src="./icons/github1.png" class="github" alt="GitHub Link">
+          </a>
+        </div>
+      <div class="project-item">
+          <h3>Meal Mate - Food Subscription Website</h3>
+          <img class="project-pic" src="./mealmate.png" alt="Meal Mate">
+          <p>
+          MealMate is a web-based food subscription platform that lets users discover and order personalized meal plans or dishes, featuring user profiles with dietary preferences, a searchable catalog filtered by category, dietary tags, or chef, and flexible subscription management with options to skip or pause deliveries.<br>         
+         </p>
+            <br><a href="https://github.com/saiparameshwarrao/Meal_Mate" target="_blank" rel="noopener noreferrer">
             <img src="./icons/github1.png" class="github" alt="GitHub Link">
           </a>
         </div>
@@ -111,16 +178,16 @@
           <img src="./icons/mongo.png" alt="MongoDB">
         </div>
     
-        <div class="category">
+        <!-- <div class="category">
           <h2>DevOps & Cloud Tools</h2>
           <img src="./icons/docker.png" alt="Docker">
           <img src="./icons/kubernetes.png" alt="Kubernetes">
           <img src="./icons/ansible.png" alt="Ansible">
           <img src="./icons/terraform.png" alt="Terraform">
           <img src="./icons/jenkins.png" alt="Jenkins">
-          <!-- <img src="./icons/github.png" alt="GitHub">
-          <img src="./icons/gitlab.png" alt="GitLab"> -->
-        </div>
+          <img src="./icons/github.png" alt="GitHub">
+          <img src="./icons/gitlab.png" alt="GitLab">
+        </div> -->
     
       </div>
     </section>
@@ -146,5 +213,7 @@
       <p class="phone-number">Phone: +91 7093235333</p>
     </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>
