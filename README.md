@@ -38,7 +38,7 @@ Portfolio/
 # 📦 How to Run Locally
 - Clone the repository:
 ```
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/saiparameshwarrao/Portfolio
 ```
 
 - Open the project folder:
